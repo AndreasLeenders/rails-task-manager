@@ -1,0 +1,14 @@
+<h1>This is the info page of <%= @task.title %></h1>
+
+<h3>Details : <%= @task.details %></h3>
+<h3>Done: <%= @task.completed %></h3>
+
+<br>
+
+<%= link_to "Back to index", tasks_path %>
+
+<h2><%=link_to  "Edit task", edit_task+-_path(@task)%></h2>
+
+
+<h2><%=link_to  "delete", task_path(@task), method: :delete,
+      data: { confirm: "Are you sure?" }%></h2>
